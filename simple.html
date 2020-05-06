@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Sample 1</title>
+        <title>Sample</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <style media="screen">
@@ -84,7 +84,6 @@
             font-size: 36px;
             color: #fff;
             text-align: center;
-            line-height: 3;
         }
         /* .signature > span{
             font-family: "letterfont";
@@ -100,8 +99,12 @@
             width: 992px;
             margin-right: auto;
             margin-left: auto;
-            padding-top: 250px;
-            padding-bottom: 50px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
         @media (max-width: 991.98px) {
             .container {
@@ -146,7 +149,7 @@
                           <p class="name animated slideInUp">Happy Mother's Day</p>
                           <p class="text">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio tortor, condimentum eget ipsum ac, pellentesque suscipit justo.
-                          </p>
+                          </p><br>
                           <p class="signature">Your son, Petter</p>
                     </div>
                 </div>
