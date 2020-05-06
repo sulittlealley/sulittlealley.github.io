@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>For you</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <style media="screen">
+        @font-face {
+            font-family: namefont; src: url(fonts/GreatVibes-Wmr4.ttf);
+        }
+        @font-face {
+            font-family: letterfont; src: url(fonts/LearningCurve-2wJ3.ttf);
+        }
+        @font-face {
+            font-family: signfont; src: url(fonts/AAutoSignature-1GD9j.ttf);
+        }
+        body{
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+        }
+        .envelope{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            opacity: 0;
+        }
+        .seal{
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-animation: pulse 2s ease-out;
+            -moz-animation: pulse 2s ease-out;
+            -o-animation: pulse 2s ease-out;
+            animation: pulse 2s ease-out;
+            animation-iteration-count: infinite;
+        }
+        hr{
+            margin-top: 50vh;
+        }
+        .background{
+            background-image: url("images/Photo by Paige Cody on Unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .letter{
+            min-height: 100%;
+            height: 100vh;
+            opacity: 1;
+            /* -webkit-animation: fadeInFromNone 1s ease-out;
+            -moz-animation: fadeInFromNone 1s ease-out;
+            -o-animation: fadeInFromNone 1s ease-out;
+            animation: fadeInFromNone 1s ease-out; */
+        }
+        .name{
+            font-family: "namefont";
+            font-size: 100px;
+            color: #fff;
+            text-align: center;
+            line-height: 1;
+            margin: 0;
+        }
+        .text{
+            font-family: "letterfont";
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            margin-top: 30px;
+            opacity: 1;
+        }
+        .surprise{
+            font-family: "letterfont";
+            font-size: 115px;
+            text-align: center;
+            color: #fff;
+            margin-top: 30px;
+            opacity: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .signature{
+            font-family: "signfont";
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            line-height: 2;
+        }
+        /* .signature > span{
+            font-family: "letterfont";
+        } */
+        button{
+            margin: auto;
+            display: block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background: transparent;
+            font-family: letterfont;
+            color: #fff;
+            font-size: 26px;
+            outline: 0;
+            box-shadow: none;
+            cursor: pointer;
+            border: 1px solid #fff;
+        }
+        button:hover{
+            background: #fff;
+            color: #000;
+            -webkit-animation: hover 1s ease-out;
+            -moz-animation: hover 1s ease-out;
+            -o-animation: hover 1s ease-out;
+            animation: hover 1s ease-out;
+        }
+        .overlay{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            bottom: 0px;
+            background: #000000ea;
+        }
+        .container {
+            width: 992px;
+            margin-right: auto;
+            margin-left: auto;
+
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        @media (max-width: 991.98px) {
+            .container {
+                max-width: 90%;
+            }
+        }
+      @-webkit-keyframes hover {
+          0% {
+              background: rgba(225,225,225,0);
+          }
+          100% {
+              background: rgba(225,225,225,1);
+          }
+      }
+    </style>
+    <body>
+        <div class="background">
+            <div class="overlay">
+                <div class="letter">
+                    <div class="container">
+                          <p class="name animated slideInUp">Happy Mother's Day</p>
+                          <p class="text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio tortor, condimentum eget ipsum ac, pellentesque suscipit justo.
+                          </p>
+                          <p class="signature">Your son, Petter</p>
+                          <button type="button" class="btn" name="button">Our memories</button>
+                    </div>
+                </div>
+                <p class="surprise">
+                    I love you!
+                </p>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(".letter").scroll(function(){
+            $(".name").css("opacity", 1 - $(".letter").scrollTop() / 250);
+            $(".text").css("opacity", 0.2 + $(".letter").scrollTop() / 300);
+        });
+
+        $(".surprise").hide();
+        $(".btn").click(function(){
+            $(".letter").fadeOut("slow");
+            $(".surprise").show();
+            $(".surprise").animate({opacity: '1'}, 2000);
+        });
+
+    </script>
+</html>
