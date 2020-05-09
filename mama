@@ -46,7 +46,7 @@
             font-size: 36px;
             text-align: center;
             color: #fff;
-            margin-top: 30px;
+            margin-top: 10px;
         }
         .signature{
             font-family: "signfont";
