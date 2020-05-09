@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Happy Mother's Day</title>
+    </head>
+    <style media="screen">
+        @font-face {
+            font-family: namefont; src: url(fonts/GreatVibes-Wmr4.ttf);
+        }
+        @font-face {
+            font-family: letterfont; src: url(fonts/LearningCurve-2wJ3.ttf);
+        }
+        @font-face {
+            font-family: signfont; src: url(fonts/AAutoSignature-1GD9j.ttf);
+        }
+        body{
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+        }
+        .background{
+            background-image: url("images/arks-bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .letter{
+            min-height: 100%;
+            height: 100vh;
+        }
+        .name{
+            font-family: "namefont";
+            font-size: 100px;
+            color: #fff;
+            text-align: center;
+            line-height: 1;
+            margin: 0;
+        }
+        .text{
+            font-family: "namefont";
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .signature{
+            font-family: "signfont";
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+        .overlay{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            bottom: 0px;
+            background: #000000ea;
+        }
+        .container {
+            width: 992px;
+            margin-right: auto;
+            margin-left: auto;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        @media (max-width: 991.98px) {
+            .container {
+                max-width: 90%;
+            }
+        }
+    </style>
+    <body>
+        <div class="background">
+            <div class="overlay">
+                <div class="letter">
+                    <div class="container">
+                          <p class="name animated slideInUp">Happy Mother's Day</p>
+                          <p class="text">
+                               love you Mamay.
+                          </p><br>
+                          <p class="signature">Ate Kiene</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
